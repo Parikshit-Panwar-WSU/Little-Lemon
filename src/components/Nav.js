@@ -1,6 +1,18 @@
+import Logo from '../Assets/Logo.svg';
+
 const Nav = () => {
     return (
-        <nav></nav>
+        <nav>
+            <ul>
+                <li><img src={Logo} alt="Logo" /></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">RESERVATIONS</a></li>
+                <li><a href="#">ORDER ONLINE</a></li>
+                <li><a href="#">LOGIN</a></li>
+            </ul>
+        </nav>
     );
 }
 
