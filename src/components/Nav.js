@@ -1,10 +1,11 @@
+import '../App.css';
 import Logo from '../Assets/Logo.svg';
 
 const Nav = () => {
     return (
-        <nav>
-            <ul>
-                <li><img src={Logo} alt="Logo" /></li>
+        <nav className='flex-container'>
+            <img src={Logo} alt='Logo' />
+            <ul className='flex-container'>
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
                 <li><a href="#">MENU</a></li>
