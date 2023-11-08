@@ -19,6 +19,8 @@ nav {
   width: 100%;
   padding: 10px;
   background-color: #edefee;
+  transition: background-color 0.5s;
+  transition-timing-function: ease-out;
 }
 
 footer {
@@ -26,28 +28,26 @@ footer {
   bottom: 0px;
   width: 100%;
   background-color: #edefee;
+  transition: background-color 0.5s;
+  transition-timing-function: ease-out;
+}
+
+/* Mouse interaction section */
+nav:hover {
+  background-color: #fbdabb;
+}
+
+footer:hover {
+  background-color: #fbdabb;
 }
 
 /* Classes section */
 .flex-container {
   display: flex;
   gap: 70px;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 /* @media and @keyframes section */
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
