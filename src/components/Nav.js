@@ -5,7 +5,7 @@ const Nav = () => {
     return (
         <nav className='flex-container'>
             <img src={Logo} alt='Logo' />
-            <ul className='flex-container'>
+            <ul className='flex-container' style={{alignContent: 'center'}}>
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
                 <li><a href="#">MENU</a></li>

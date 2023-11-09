@@ -4,11 +4,11 @@ import Logo from '../Assets/Logo.svg';
 
 const Footer = () => {
     return (
-        <footer className='flex-container' style={{gap: 120}}>
+        <footer className='flex-container' style={{gap: 120, marginTop: 20}}>
             <Box w='150px' h='full' display='flex' alignItems='center'>
                 <img src={Logo} alt='Logo' />
             </Box>
-            <ul>
+            <ul style={{padding: 10}}>
                 <li style={{color: '#495e57', fontWeight: 'bold'}}>
                     Doormat Navigation
                 </li>
@@ -19,13 +19,13 @@ const Footer = () => {
                 <li>Order Online</li>
                 <li style={{color: '#495e57', fontWeight: 'bold'}}>Login</li>
             </ul>
-            <ul>
+            <ul style={{padding: 10}}>
                 <li style={{color: '#495e57', fontWeight: 'bold'}}>Contact</li>
                 <li>Address</li>
                 <li>Phone Number</li>
                 <li>Email</li>
             </ul>
-            <ul>
+            <ul style={{padding: 10}}>
                 <li style={{color: '#495e57', fontWeight: 'bold'}}>Social Media Links</li>
                 <li>Address</li>
                 <li>Phone Number</li>

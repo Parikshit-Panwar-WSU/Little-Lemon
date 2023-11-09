@@ -1,6 +1,7 @@
-const Main = () => {
+const Main = ({children}) => {
     return (
         <main>
+            {children}
         </main>
     );
 }

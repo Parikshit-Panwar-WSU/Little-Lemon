@@ -1,6 +1,8 @@
-const Header = () => {
+const Header = ({children}) => {
     return (
-        <header></header>
+        <header>
+            {children}
+        </header>
     );
 }
 
