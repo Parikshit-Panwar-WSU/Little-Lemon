@@ -24,6 +24,7 @@ nav {
   background-color: #edefee;
   transition: background-color 0.5s;
   transition-timing-function: ease-out;
+  z-index: 10;
 }
 
 footer {
@@ -69,3 +70,13 @@ footer:hover {
 }
 
 /* @media and @keyframes section */
+@media only screen and (max-width: 750px) {
+  .specialsMobile {
+    gap: 100% !important;
+    margin-top: 30px !important;
+  }
+
+  .navMobile, .footerMobile {
+    gap: 40px !important;
+  }
+}

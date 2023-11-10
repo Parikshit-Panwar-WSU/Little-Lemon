@@ -1,6 +1,6 @@
-const Main = ({children}) => {
+const Main = ({classes, children, mainStyles}) => {
     return (
-        <main>
+        <main className={classes} style={mainStyles}>
             {children}
         </main>
     );

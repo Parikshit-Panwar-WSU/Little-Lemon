@@ -3,9 +3,9 @@ import Logo from '../Assets/Logo.svg';
 
 const Nav = () => {
     return (
-        <nav className='flex-container'>
+        <nav className='flex-container navMobile'>
             <img src={Logo} alt='Logo' />
-            <ul className='flex-container' style={{alignContent: 'center'}}>
+            <ul className='flex-container navMobile' style={{alignContent: 'center'}}>
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
                 <li><a href="#">MENU</a></li>

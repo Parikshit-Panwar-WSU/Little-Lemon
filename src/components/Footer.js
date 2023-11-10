@@ -4,7 +4,7 @@ import Logo from '../Assets/Logo.svg';
 
 const Footer = () => {
     return (
-        <footer className='flex-container' style={{gap: 120, marginTop: 20}}>
+        <footer className='flex-container footerMobile' style={{gap: 120, marginTop: 20}}>
             <Box w='150px' h='full' display='flex' alignItems='center'>
                 <img src={Logo} alt='Logo' />
             </Box>

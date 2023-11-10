@@ -1,6 +1,6 @@
-const Header = ({children}) => {
+const Header = ({classes, children, headerStyles}) => {
     return (
-        <header>
+        <header className={classes} style={headerStyles}>
             {children}
         </header>
     );
