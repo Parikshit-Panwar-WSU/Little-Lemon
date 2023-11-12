@@ -4,27 +4,27 @@ import Logo from '../Assets/lemon dessert.jpg';
 import Button from 'react-bootstrap/Button';
 
 const HeroSection = () => {
-    const styleObj_h1 = {
+    const littleLemonHeading = {
         marginTop: 0,
         marginBottom: 0,
-        color: '#495e57',
+        color: '#f4ce14',
         fontSize: 40
     }
 
-    const styleObj_h4 = {
+    const chicagoHeading = {
         marginTop: 0,
         fontSize: 20,
-        color: '#495e57'
+        color: '#edefee'
     }
 
     return (
-        <main className='flex-container' style={{marginTop: 20}}>
+        <main className='flex-container' style={{padding: 20, backgroundColor: '#495e57'}}>
             <article style={{width: 400}}>
                 <Header>
-                    <h1 style={styleObj_h1}>Little Lemon</h1>
-                    <h4 style={styleObj_h4}>Chicago</h4>
+                    <h1 style={littleLemonHeading}>Little Lemon</h1>
+                    <h4 style={chicagoHeading}>Chicago</h4>
                 </Header>
-                <p style={{marginBottom: 30}}>Lorem ipsum dolor sit amet, consectetur 
+                <p style={{marginBottom: 30, color: '#edefee'}}>Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua.
                     Lorem ipsum dolor sit amet, consectetur.

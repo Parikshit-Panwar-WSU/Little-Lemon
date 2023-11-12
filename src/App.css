@@ -60,20 +60,20 @@ footer:hover {
 }
 
 .button-class {
-  color: #edefee;
-  background-color: black;
-  border-radius: 3px;
+  color: #495e57;
+  background-color: #f4ce14;
+  border-radius: 10px;
   border: none;
-  font-weight: lighter;
-  font-size: small;
-  padding: 10px;
+  height: fit-content;
+  font-weight: bolder;
+  font-size: medium;
+  padding: 5px;
 }
 
 /* @media and @keyframes section */
 @media only screen and (max-width: 750px) {
-  .specialsMobile {
-    gap: 100% !important;
-    margin-top: 30px !important;
+  .specialMobile {
+    justify-content: center !important;
   }
 
   .navMobile, .footerMobile {
