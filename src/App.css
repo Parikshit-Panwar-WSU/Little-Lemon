@@ -70,13 +70,19 @@ footer:hover {
   padding: 5px;
 }
 
+.card-shadow:hover {
+  /* box-shadow: -1px 1px 5px; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 /* @media and @keyframes section */
 @media only screen and (max-width: 750px) {
   .specialMobile {
     justify-content: center !important;
   }
 
-  .navMobile, .footerMobile {
+  .navMobile, .footerMobile, .heroMobile {
     gap: 40px !important;
   }
 }

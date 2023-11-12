@@ -18,13 +18,13 @@ const HeroSection = () => {
     }
 
     return (
-        <main className='flex-container' style={{padding: 20, backgroundColor: '#495e57'}}>
+        <main className='flex-container heroMobile' style={{padding: 20, backgroundColor: '#495e57'}}>
             <article style={{width: 400}}>
                 <Header>
                     <h1 style={littleLemonHeading}>Little Lemon</h1>
                     <h4 style={chicagoHeading}>Chicago</h4>
                 </Header>
-                <p style={{marginBottom: 30, color: '#edefee'}}>Lorem ipsum dolor sit amet, consectetur 
+                <p style={{marginBottom: 30, color: '#edefee'}}>Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua.
                     Lorem ipsum dolor sit amet, consectetur.

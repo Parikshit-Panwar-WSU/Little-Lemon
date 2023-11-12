@@ -45,7 +45,7 @@ const Specials = () => {
 
     for (let i = 0; i < specialItems.length; i++) {
         cardArray.push(
-            <Card key = {i} style={{ width: 200}}>
+            <Card key = {i} className='card-shadow' style={{width: 200}}>
                 <Card.Img variant="top" src={specialItems[i].image} style={{height: 133}} />
                 <Card.Body style={cardStyle}>
                     <Card.Title style={cardTitleStyle}>
