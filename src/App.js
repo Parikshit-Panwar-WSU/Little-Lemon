@@ -7,6 +7,7 @@ import Footer from './components/Footer.js';
 import HeroSection from './components/HeroSection.js';
 import Specials from './components/Specials.js';
 import Testimonials from './components/Testimonials.js';
+import About from './components/About.js';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <HeroSection />
       <Specials />
       <Testimonials />
+      <About />
       <Footer />
     </>
   );

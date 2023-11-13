@@ -8,6 +8,7 @@ import GreekSaladImg from '../Assets/greek salad.jpg';
 
 const Specials = () => {
     const cardArray = [];
+
     const specialItems = [
         {
             name: 'Greek Salad',

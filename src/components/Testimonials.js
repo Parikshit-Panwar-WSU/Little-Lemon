@@ -38,7 +38,7 @@ const Testimonials = () => {
 
     return (
         <section role='testimonials' style={testimonialsStyle}>
-            <header style={{marginTop: 10, marginBottom: 20}}>
+            <header style={{marginTop: 10, marginBottom: 50}}>
                 <h1 style={{display: 'flex', justifyContent: 'center'}}>Testimonials</h1>
             </header>
             <main style={{display: 'flex', width: '100%', justifyContent: 'center'}}>

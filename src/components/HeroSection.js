@@ -9,13 +9,13 @@ const HeroSection = () => {
         marginBottom: 0,
         color: '#f4ce14',
         fontSize: 40
-    }
+    };
 
     const chicagoHeading = {
         marginTop: 0,
         fontSize: 20,
         color: '#edefee'
-    }
+    };
 
     return (
         <main role='heroSection' className='flex-container heroMobile' style={{padding: 20, backgroundColor: '#495e57'}}>
