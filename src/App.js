@@ -6,6 +6,7 @@ import Nav from './components/Nav.js';
 import Footer from './components/Footer.js';
 import HeroSection from './components/HeroSection.js';
 import Specials from './components/Specials.js';
+import Testimonials from './components/Testimonials.js';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Nav />
       <HeroSection />
       <Specials />
+      <Testimonials />
       <Footer />
     </>
   );

@@ -18,7 +18,7 @@ const HeroSection = () => {
     }
 
     return (
-        <main className='flex-container heroMobile' style={{padding: 20, backgroundColor: '#495e57'}}>
+        <main role='heroSection' className='flex-container heroMobile' style={{padding: 20, backgroundColor: '#495e57'}}>
             <article style={{width: 400}}>
                 <Header>
                     <h1 style={littleLemonHeading}>Little Lemon</h1>

@@ -53,7 +53,7 @@ footer:hover {
 /* Classes section */
 .flex-container {
   display: flex;
-  gap: 70px;
+  gap: 50px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
