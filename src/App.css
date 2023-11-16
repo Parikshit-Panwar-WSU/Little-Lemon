@@ -82,7 +82,8 @@ footer:hover {
     justify-content: center !important;
   }
 
-  .navMobile, .footerMobile, .heroMobile {
+  .navMobile, .footerMobile, .heroMobile,
+  .reservationMobile {
     gap: 40px !important;
   }
 }
