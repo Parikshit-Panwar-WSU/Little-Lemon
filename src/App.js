@@ -5,14 +5,13 @@ import React from 'react';
 import Nav from './components/Nav.js';
 import Footer from './components/Footer.js';
 import HomePage from './components/HomePage.js';
-import ReservationPage from './components/ReservationPage.js';
+import BookingForm from './components/BookingForm.js';
 
 function App() {
   return (
     <>
       <Nav />
-        <ReservationPage />
-      <Footer />
+      <BookingForm />
     </>
   );
 }

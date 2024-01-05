@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Button } from 'react-bootstrap';
 
-const ReservationPage = () => {
+const BookingForm = () => {
     return (
         <main role='reservationSection' className='flex-container reservationMobile'
         style={{padding: 20, backgroundColor: '#495e57'}}>
@@ -68,4 +68,4 @@ const ReservationPage = () => {
     );
 }
 
-export default ReservationPage;
+export default BookingForm;
