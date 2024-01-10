@@ -36,6 +36,23 @@ footer {
   transition-timing-function: ease-out;
 }
 
+.form-field-error {
+  border-color: #cc3300;
+}
+
+.error {
+  color: #cc3300;
+}
+
+.form-fields {
+  width: 400px;
+}
+
+.label-text {
+  color: whitesmoke;
+  font-size: large;
+}
+
 /* Mouse interaction section */
 nav:hover {
   background-color: #fbdabb;
