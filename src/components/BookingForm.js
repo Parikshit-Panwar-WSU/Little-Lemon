@@ -2,7 +2,6 @@ import { VStack } from '@chakra-ui/react';
 import { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import Specials from './Specials';
 
 const BookingForm = () => {
     const availableTimes = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
