@@ -24,10 +24,8 @@ const BookingForm = (props) => {
 
     const handleChange = (event) => {
         const targetName = event.target.name;
-        if (targetName == 'resDate') {
-            console.log(event.target.value);
+        if (targetName == 'resDate')
             props.dispatch({type: event.target.value});
-        }
         setUserData(prevState => {
             return {...prevState, [targetName]: event.target.value}
         });
