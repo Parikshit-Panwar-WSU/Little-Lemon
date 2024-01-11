@@ -10,12 +10,13 @@ import HeroSection from './components/HeroSection.js';
 import Specials from './components/Specials.js';
 import Testimonials from './components/Testimonials.js';
 import About from './components/About.js';
+import BookingPage from './components/BookingPage.js';
 
 function App() {
   return (
     <>
       <Nav />
-      <BookingForm />
+      <BookingPage />
     </>
   );
 }

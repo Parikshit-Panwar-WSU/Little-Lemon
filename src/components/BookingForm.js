@@ -1,10 +1,9 @@
 import { VStack } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useState} from 'react';
 import { Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 
-const BookingForm = () => {
-    const availableTimes = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+const BookingForm = (props) => {
     const occasionOptions = ['Birthday', 'Anniversary', 'Other'];
 
     const [userData, setUserData] = useState({
@@ -12,7 +11,7 @@ const BookingForm = () => {
                                         email: '',
                                         mobile: '',
                                         resDate: new Date().toISOString().split('T')[0],
-                                        resTime: availableTimes[0],
+                                        resTime: props.availableTimes[0],
                                         guests: 1,
                                         occasion: occasionOptions[0]
                             });
@@ -25,6 +24,8 @@ const BookingForm = () => {
 
     const handleChange = (event) => {
         const targetName = event.target.name;
+        if (targetName == 'resDate')
+            props.dispatch({type: event.target.value});
         setUserData(prevState => {
             return {...prevState, [targetName]: event.target.value}
         });
@@ -69,7 +70,7 @@ const BookingForm = () => {
                             <Form.Control
                                 type='text'
                                 placeholder='US: +1'
-                                disabled='true'
+                                disabled={true}
                                 style={{
                                     display: 'inline',
                                     width: 75,
@@ -104,7 +105,7 @@ const BookingForm = () => {
                         <div>
                             <label htmlFor='resTime' className='label-text'>Select Time: &nbsp;</label>
                             <select name='resTime' id='resTime' style={{width: 100}} value={userData.resTime} onChange={handleChange}>
-                                {availableTimes.map((times) => <option key={times} value={times}>{times}</option>)}
+                                {props.availableTimes.map((times) => <option key={times} value={times}>{times}</option>)}
                             </select>
                         </div>
                         <div>
