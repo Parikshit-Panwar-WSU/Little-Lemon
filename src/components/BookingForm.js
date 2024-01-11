@@ -24,8 +24,10 @@ const BookingForm = (props) => {
 
     const handleChange = (event) => {
         const targetName = event.target.name;
-        if (targetName == 'resDate')
+        if (targetName == 'resDate') {
+            console.log(event.target.value);
             props.dispatch({type: event.target.value});
+        }
         setUserData(prevState => {
             return {...prevState, [targetName]: event.target.value}
         });
@@ -98,13 +100,20 @@ const BookingForm = (props) => {
                                 name='resDate'
                                 id='resDate'
                                 type="date"
+                                data-testid='resDate'
                                 value={userData.resDate}
                                 onChange={handleChange}
                                 min={new Date().toISOString().split('T')[0]} />
                         </div>
                         <div>
                             <label htmlFor='resTime' className='label-text'>Select Time: &nbsp;</label>
-                            <select name='resTime' id='resTime' style={{width: 100}} value={userData.resTime} onChange={handleChange}>
+                            <select
+                                name='resTime'
+                                id='resTime'
+                                data-testid='resTime'
+                                style={{width: 100}}
+                                value={userData.resTime}
+                                onChange={handleChange}>
                                 {props.availableTimes.map((times) => <option key={times} value={times}>{times}</option>)}
                             </select>
                         </div>
