@@ -217,6 +217,7 @@ const BookingForm = (props) => {
                             className='button-class'
                             style={{width: 250}}
                             data-testid='submitBtn'
+                            aria-label='On Click'
                             variant="primary">
                                 Reserve a Table
                         </Button>

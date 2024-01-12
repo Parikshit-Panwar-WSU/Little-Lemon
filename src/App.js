@@ -5,18 +5,15 @@ import React from 'react';
 import Nav from './components/Nav.js';
 import Footer from './components/Footer.js';
 import HomePage from './components/HomePage.js';
-import BookingForm from './components/BookingForm.js';
-import HeroSection from './components/HeroSection.js';
-import Specials from './components/Specials.js';
-import Testimonials from './components/Testimonials.js';
-import About from './components/About.js';
 import BookingPage from './components/BookingPage.js';
 
 function App() {
   return (
     <>
       <Nav />
-      <BookingPage />
+      {/* <BookingPage /> */}
+      <HomePage />
+      <Footer />
     </>
   );
 }

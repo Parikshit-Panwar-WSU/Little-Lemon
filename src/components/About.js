@@ -4,6 +4,7 @@ const About = () => {
     const littleLemonHeading = {
         marginTop: 0,
         marginBottom: 0,
+        color: '#f4ce14',
         fontSize: 40
     };
 
