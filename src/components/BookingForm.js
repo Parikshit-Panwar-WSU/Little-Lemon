@@ -89,7 +89,8 @@ const BookingForm = (props) => {
                                 Full Name:
                                 { errors.nameError ?
                                     <p style={{marginBottom: 0, marginLeft: 130}}
-                                        className='error'>
+                                        className='error'
+                                        data-testid='fullNameError'>
                                             Please enter you name!</p>
                                     : ""
                                 }
@@ -100,6 +101,7 @@ const BookingForm = (props) => {
                                 type="text"
                                 value={userData.fullName}
                                 onChange={handleChange}
+                                data-testid='fullName'
                                 placeholder="Enter Full Name"
                                 className='form-fields' />
                         </div>
@@ -108,7 +110,8 @@ const BookingForm = (props) => {
                                 Email:
                                 { errors.emailError ?
                                     <p style={{marginBottom: 0, marginLeft: 160}}
-                                    className='error'>
+                                    className='error'
+                                    data-testid='emailError'>
                                     Please enter valid email!</p>
                                     : ""
                                 }
@@ -119,6 +122,7 @@ const BookingForm = (props) => {
                                 type='email'
                                 value={userData.email}
                                 onChange={handleChange}
+                                data-testid='email'
                                 placeholder='Enter valid email'
                                 className='form-fields' />
                         </div>
@@ -126,7 +130,8 @@ const BookingForm = (props) => {
                             <label htmlFor='mobile' style={{display: 'flex', margin: 0}} className='label-text'>
                                 Mobile:
                                 { errors.mobileError ? <p style={{marginBottom: 0, marginLeft: 50}}
-                                    className='error'>
+                                    className='error'
+                                    data-testid='mobileError'>
                                     Please enter a valid mobile!</p>
                                     : ""
                                 }
@@ -151,6 +156,7 @@ const BookingForm = (props) => {
                                 type='text'
                                 value={userData.mobile}
                                 onChange={handleChange}
+                                data-testid='mobile'
                                 placeholder='Enter mobile number'/>
                         </div>
                         <div>
@@ -192,15 +198,28 @@ const BookingForm = (props) => {
                                 onChange={handleChange}
                                 min='1'
                                 max='10'
+                                data-testid='guests'
                                 placeholder='1' />
                         </div>
                         <div>
                             <label htmlFor='occasion' className='label-text'>Occasion: &nbsp;</label>
-                            <select name='occasion' id='occasion' value={userData.occasion} onChange={handleChange} >
+                            <select
+                                name='occasion'
+                                id='occasion'
+                                data-testid='occasion'
+                                value={userData.occasion}
+                                onChange={handleChange} >
                                 {occasionOptions.map((occasion) => <option key={occasion} value={occasion}>{occasion}</option>)}
                             </select>
                         </div>
-                        <Button type='submit' className='button-class' style={{width: 250}} variant="primary">Reserve a Table</Button>
+                        <Button
+                            type='submit'
+                            className='button-class'
+                            style={{width: 250}}
+                            data-testid='submitBtn'
+                            variant="primary">
+                                Reserve a Table
+                        </Button>
                     </VStack>
                 </div>
             </form>
