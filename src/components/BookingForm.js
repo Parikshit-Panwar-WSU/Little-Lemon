@@ -24,17 +24,47 @@ const BookingForm = (props) => {
 
     const handleChange = (event) => {
         const targetName = event.target.name;
-        if (targetName == 'resDate')
+        if (targetName === 'resDate')
             props.dispatch({type: event.target.value});
         setUserData(prevState => {
             return {...prevState, [targetName]: event.target.value}
         });
     }
 
+    const checkEmail = (emailID) => {
+        const testExpression = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return testExpression.test(String(emailID).toLowerCase());
+    }
+
     const handleSubmit = (event) => {
+        console.log('Handling submission!');
         event.preventDefault();
-        let bookingData = {...userData};
-        props.submitForm(bookingData);
+
+        // check validity.
+        let isNameValid = userData.fullName.length > 0;
+        let isEmailValid = checkEmail(userData.email);
+        let isMobileValid = userData.mobile.length === 10;
+
+        // If no error exists.
+        if (isNameValid && isEmailValid && isMobileValid) {
+            setErrors(prevState => {
+                return {...prevState,
+                        nameError: !isNameValid,
+                        emailError: !isEmailValid,
+                        mobileError: !isMobileValid }
+            });
+
+            let bookingData = {...userData};
+            props.submitForm(bookingData);
+        }
+        else {  // If any of the above error exists.
+            setErrors(prevState => {
+                return {...prevState,
+                        nameError: !isNameValid,
+                        emailError: !isEmailValid,
+                        mobileError: !isMobileValid }
+            });
+        }
     }
 
     return (
@@ -45,7 +75,13 @@ const BookingForm = (props) => {
                         <h1 style={{color: '#f4ce14'}}>Reservations</h1>
                         <div>
                             <label htmlFor='fullName' style={{display: 'flex', margin: 0}} className='label-text'>
-                                Full Name: <p style={{marginBottom: 0, marginLeft: 230}} className='error'>Required!</p>
+                                Full Name:
+                                { errors.nameError ?
+                                    <p style={{marginBottom: 0, marginLeft: 230}}
+                                        className='error'>
+                                            Required!</p>
+                                    : ""
+                                }
                             </label>
                             <Form.Control
                                 name='fullName'
@@ -58,7 +94,13 @@ const BookingForm = (props) => {
                         </div>
                         <div>
                             <label htmlFor='email' style={{display: 'flex', margin: 0}} className='label-text'>
-                                Email: <p style={{marginBottom: 0, marginLeft: 270}} className='error'>Required!</p>
+                                Email:
+                                { errors.emailError ?
+                                    <p style={{marginBottom: 0, marginLeft: 270}}
+                                    className='error'>
+                                    Required!</p>
+                                    : ""
+                                }
                             </label>
                             <Form.Control
                                 name='email'
@@ -71,7 +113,12 @@ const BookingForm = (props) => {
                         </div>
                         <div>
                             <label htmlFor='mobile' style={{display: 'flex', margin: 0}} className='label-text'>
-                                Mobile: <p style={{marginBottom: 0, marginLeft: 130}} className='error'>Required!</p>
+                                Mobile:
+                                { errors.mobileError ? <p style={{marginBottom: 0, marginLeft: 130}}
+                                    className='error'>
+                                    Required!</p>
+                                    : ""
+                                }
                             </label>
                             <Form.Control
                                 type='text'
@@ -142,7 +189,7 @@ const BookingForm = (props) => {
                                 {occasionOptions.map((occasion) => <option key={occasion} value={occasion}>{occasion}</option>)}
                             </select>
                         </div>
-                        <Button type='submit' disabled={true} className='button-class' style={{width: 250}} variant="primary">Reserve a Table</Button>
+                        <Button type='submit' className='button-class' style={{width: 250}} variant="primary">Reserve a Table</Button>
                     </VStack>
                 </div>
             </form>
