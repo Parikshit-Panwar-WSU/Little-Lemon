@@ -2,6 +2,7 @@ import { VStack } from '@chakra-ui/react';
 import { useState} from 'react';
 import { Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
+import ConfirmedBooking from './ConfirmedBooking';
 
 const BookingForm = (props) => {
     const occasionOptions = ['Birthday', 'Anniversary', 'Other'];
@@ -21,6 +22,10 @@ const BookingForm = (props) => {
                                     emailError: false,
                                     mobileError: false,
                             });
+
+    const [showToast, setShowToast] = useState(false);
+
+    const toggleToast = () => setShowToast(!showToast);
 
     const handleChange = (event) => {
         const targetName = event.target.name;
@@ -54,6 +59,7 @@ const BookingForm = (props) => {
                         mobileError: !isMobileValid }
             });
 
+            setShowToast(true);
             let bookingData = {...userData};
             props.submitForm(bookingData);
         }
@@ -64,6 +70,8 @@ const BookingForm = (props) => {
                         emailError: !isEmailValid,
                         mobileError: !isMobileValid }
             });
+
+            setShowToast(false);
         }
     }
 
@@ -73,13 +81,16 @@ const BookingForm = (props) => {
                 <div style={{display: 'flex', width: 500}}>
                     <VStack spacing={25} align={'start'}>
                         <h1 style={{color: '#f4ce14'}}>Reservations</h1>
+                        <ConfirmedBooking
+                            showToast={showToast}
+                            toggleToast={toggleToast} />
                         <div>
                             <label htmlFor='fullName' style={{display: 'flex', margin: 0}} className='label-text'>
                                 Full Name:
                                 { errors.nameError ?
-                                    <p style={{marginBottom: 0, marginLeft: 230}}
+                                    <p style={{marginBottom: 0, marginLeft: 130}}
                                         className='error'>
-                                            Required!</p>
+                                            Please enter you name!</p>
                                     : ""
                                 }
                             </label>
@@ -96,9 +107,9 @@ const BookingForm = (props) => {
                             <label htmlFor='email' style={{display: 'flex', margin: 0}} className='label-text'>
                                 Email:
                                 { errors.emailError ?
-                                    <p style={{marginBottom: 0, marginLeft: 270}}
+                                    <p style={{marginBottom: 0, marginLeft: 160}}
                                     className='error'>
-                                    Required!</p>
+                                    Please enter valid email!</p>
                                     : ""
                                 }
                             </label>
@@ -114,9 +125,9 @@ const BookingForm = (props) => {
                         <div>
                             <label htmlFor='mobile' style={{display: 'flex', margin: 0}} className='label-text'>
                                 Mobile:
-                                { errors.mobileError ? <p style={{marginBottom: 0, marginLeft: 130}}
+                                { errors.mobileError ? <p style={{marginBottom: 0, marginLeft: 50}}
                                     className='error'>
-                                    Required!</p>
+                                    Please enter a valid mobile!</p>
                                     : ""
                                 }
                             </label>

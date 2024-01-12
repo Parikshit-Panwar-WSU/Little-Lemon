@@ -2,13 +2,13 @@ import { useState } from "react";
 import { Toast } from "react-bootstrap";
 import Logo from '../Assets/lemon dessert.jpg';
 
-const ConfirmedBooking = () => {
-    const [showToast, setShowToast] = useState(true);
+const ConfirmedBooking = (props) => {
+    // const [showToast, setShowToast] = useState(true);
 
-    const toggleToast = () => setShowToast(!showToast);
+    // const toggleToast = () => setShowToast(!showToast);
 
     return (
-        <Toast onClose={toggleToast} show={showToast} animation={false}>
+        <Toast onClose={props.toggleToast} show={props.showToast} animation={false}>
           <Toast.Header>
             <img
               src={Logo}
