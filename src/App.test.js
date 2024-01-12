@@ -35,8 +35,8 @@ test('Testing the booking functionality-Success test', () => {
   const occasion = screen.getByTestId('occasion');
   const submitBtn = screen.getByTestId('submitBtn');
 
-  fireEvent.change(name, {target: {value: 'Parikshit Panwar'}});
-  fireEvent.change(email, {target: {value: 'ppanwar97@yahoo.com'}});
+  fireEvent.change(name, {target: {value: 'User A'}});
+  fireEvent.change(email, {target: {value: 'helloworld@aol.com'}});
   fireEvent.change(mobile, {target: {value: '1234567891'}});
   fireEvent.change(date, {target: {value: '2024-01-15'}});
   fireEvent.change(time, {target: {value: "22:00"}});
@@ -48,8 +48,8 @@ test('Testing the booking functionality-Success test', () => {
 
   expect(headingElement).toBeInTheDocument();
   expect(toastMessage).toBeInTheDocument();
-  expect(name.value).toBe('Parikshit Panwar');
-  expect(email.value).toBe('ppanwar97@yahoo.com');
+  expect(name.value).toBe('User A');
+  expect(email.value).toBe('helloworld@aol.com');
   expect(mobile.value).toBe('1234567891');
   expect(date.value).toBe('2024-01-15');
   expect(time.value).toBe("22:00");
