@@ -31,9 +31,15 @@ const BookingForm = (props) => {
         });
     }
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        let bookingData = {...userData};
+        props.submitForm(bookingData);
+    }
+
     return (
         <section style={{padding: 20, backgroundColor: '#495e57'}}>
-            <form noValidate style={{display: 'flex', justifyContent: 'center'}}>
+            <form noValidate onSubmit={handleSubmit} style={{display: 'flex', justifyContent: 'center'}}>
                 <div style={{display: 'flex', width: 500}}>
                     <VStack spacing={25} align={'start'}>
                         <h1 style={{color: '#f4ce14'}}>Reservations</h1>
@@ -136,7 +142,7 @@ const BookingForm = (props) => {
                                 {occasionOptions.map((occasion) => <option key={occasion} value={occasion}>{occasion}</option>)}
                             </select>
                         </div>
-                        <Button type='submit' className='button-class' style={{width: 250}} variant="primary">Reserve a Table</Button>
+                        <Button type='submit' disabled={true} className='button-class' style={{width: 250}} variant="primary">Reserve a Table</Button>
                     </VStack>
                 </div>
             </form>
