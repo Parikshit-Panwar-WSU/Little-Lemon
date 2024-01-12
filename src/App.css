@@ -36,23 +36,6 @@ footer {
   transition-timing-function: ease-out;
 }
 
-.form-field-error {
-  border-color: #cc3300;
-}
-
-.error {
-  color: #cc3300;
-}
-
-.form-fields {
-  width: 400px;
-}
-
-.label-text {
-  color: whitesmoke;
-  font-size: large;
-}
-
 /* Mouse interaction section */
 nav:hover {
   background-color: #fbdabb;
@@ -60,11 +43,6 @@ nav:hover {
 
 footer:hover {
   background-color: #fbdabb;
-}
-
-.button-class:active {
-  color: #edefee;
-  background-color: #0096ff;
 }
 
 /* Classes section */
@@ -91,6 +69,28 @@ footer:hover {
   /* box-shadow: -1px 1px 5px; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
               0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-field-error {
+  border-color: #cc3300;
+}
+
+.error {
+  color: #cc3300;
+}
+
+.form-fields {
+  width: 400px;
+}
+
+.label-text {
+  color: whitesmoke;
+  font-size: large;
+}
+
+.button-class:active {
+  color: #edefee;
+  background-color: #0096ff;
 }
 
 /* @media and @keyframes section */

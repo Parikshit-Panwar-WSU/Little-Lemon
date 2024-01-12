@@ -1,6 +1,5 @@
 import { useEffect, useReducer} from "react";
 import BookingForm from "./BookingForm";
-import ConfirmedBooking from "./ConfirmedBooking";
 
 // This is a reducer function.
 const updateTimes = (state, action) => {

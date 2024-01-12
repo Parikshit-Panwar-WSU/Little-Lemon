@@ -6,13 +6,16 @@ import Nav from './components/Nav.js';
 import Footer from './components/Footer.js';
 import HomePage from './components/HomePage.js';
 import BookingPage from './components/BookingPage.js';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
       <Nav />
-      {/* <BookingPage /> */}
-      <HomePage />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='booking' element={<BookingPage />} />
+      </Routes>
       <Footer />
     </>
   );
