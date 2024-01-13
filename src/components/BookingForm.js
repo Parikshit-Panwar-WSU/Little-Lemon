@@ -60,6 +60,17 @@ const BookingForm = (props) => {
             });
 
             setShowToast(true);
+            setUserData(prevState => {
+                return {...prevState,
+                    fullName: '',
+                    email: '',
+                    mobile: '',
+                    resDate: new Date().toISOString().split('T')[0],
+                    resTime: props.availableTimes[0],
+                    guests: 1,
+                    occasion: occasionOptions[0]}
+            });
+
             let bookingData = {...userData};
             props.submitForm(bookingData);
         }

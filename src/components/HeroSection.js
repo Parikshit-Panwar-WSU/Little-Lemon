@@ -3,7 +3,7 @@ import Header from './Header.js';
 import Logo from '../Assets/lemon dessert.jpg';
 import { Link } from 'react-router-dom';
 
-const HeroSection = () => {
+const HeroSection = (props) => {
     const littleLemonHeading = {
         marginTop: 0,
         marginBottom: 0,
@@ -29,7 +29,10 @@ const HeroSection = () => {
                     incididunt ut labore et dolore magna aliqua.
                     Lorem ipsum dolor sit amet, consectetur.
                 </p>
-                <Link to='/booking' className='button-class'>Reserve a Table</Link>
+                <Link to='/booking'
+                    onClick={() => props.updatePage(props.pageMode.RESERVATION)}
+                    className='button-class'>Reserve a Table
+                </Link>
             </article>
             <img src={Logo} alt="Logo" style={{borderRadius: 10}} />
         </main>
