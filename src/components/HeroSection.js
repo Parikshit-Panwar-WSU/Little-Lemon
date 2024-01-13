@@ -1,7 +1,7 @@
 import './Header.js';
 import Header from './Header.js';
 import Logo from '../Assets/lemon dessert.jpg';
-import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
     const littleLemonHeading = {
@@ -29,7 +29,7 @@ const HeroSection = () => {
                     incididunt ut labore et dolore magna aliqua.
                     Lorem ipsum dolor sit amet, consectetur.
                 </p>
-                <Button className='button-class'>Reserve a Table</Button>
+                <Link to='/booking' className='button-class'>Reserve a Table</Link>
             </article>
             <img src={Logo} alt="Logo" style={{borderRadius: 10}} />
         </main>

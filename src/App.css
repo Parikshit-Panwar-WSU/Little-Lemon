@@ -71,6 +71,11 @@ footer:hover {
               0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.button-class:active {
+  color: #edefee;
+  background-color: #0096ff;
+}
+
 .form-field-error {
   border-color: #cc3300;
 }
@@ -84,13 +89,19 @@ footer:hover {
 }
 
 .label-text {
-  color: whitesmoke;
+  color: #edefee;
   font-size: large;
 }
 
-.button-class:active {
+.page-selected {
+  background-color: #495e57;
   color: #edefee;
-  background-color: #0096ff;
+  border-radius: 10px;
+  border: none;
+  height: fit-content;
+  font-weight: bolder;
+  font-size: medium;
+  padding: 15px;
 }
 
 /* @media and @keyframes section */
